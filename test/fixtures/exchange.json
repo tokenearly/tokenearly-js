@@ -1,0 +1,10 @@
+{
+  "id": "gate",
+  "name": "Gate.io",
+  "name_i18n": { "zh": "芝麻开门" },
+  "collection": "websocket",
+  "listings_30d": 67,
+  "spot_30d": 26,
+  "futures_30d": 41,
+  "archive_url": "https://tokenearly.com/en/exchanges/gate/announcements"
+}

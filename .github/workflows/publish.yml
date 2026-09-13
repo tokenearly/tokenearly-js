@@ -1,0 +1,40 @@
+name: Publish to npm
+
+# Publishing is triggered by a GitHub Release, so a tag alone never ships.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [18, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+      - run: node bin/tokenearly.js --help
+
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      # Lets npm mint a short-lived credential over OIDC (trusted publishing),
+      # so there is no long-lived token to store or leak.
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      # Trusted publishing needs npm 11.5.1 or newer.
+      - run: npm install -g npm@latest
+      - run: npm --version
+      - run: npm publish --access public

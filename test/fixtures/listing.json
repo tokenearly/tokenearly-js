@@ -1,0 +1,14 @@
+{
+  "exchange": "binance",
+  "exchange_name": "Binance",
+  "type": "spot",
+  "symbols": ["ARB", "OP"],
+  "published_at": "2026-09-10T08:12:00Z",
+  "title": {
+    "en": "Binance Will List Arbitrum (ARB)",
+    "zh": "币安将上线 Arbitrum (ARB)",
+    "ko": "바이낸스 Arbitrum (ARB) 상장"
+  },
+  "source_url": "https://www.binance.com/en/support/announcement/x",
+  "permalink": "https://tokenearly.com/announcement/abc.html"
+}

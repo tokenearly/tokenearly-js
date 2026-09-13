@@ -1,0 +1,60 @@
+{
+  "name": "tokenearly",
+  "version": "0.1.0",
+  "description": "Read new crypto exchange token listings from the public Tokenearly feed. No account, no API key.",
+  "keywords": [
+    "crypto",
+    "cryptocurrency",
+    "exchange",
+    "listing",
+    "listings",
+    "new-listing",
+    "announcements",
+    "alerts",
+    "binance",
+    "okx",
+    "bybit",
+    "bitget",
+    "gate",
+    "mexc",
+    "upbit",
+    "bithumb",
+    "telegram",
+    "trading",
+    "cli"
+  ],
+  "homepage": "https://tokenearly.com",
+  "bugs": {
+    "url": "https://github.com/tokenearly/tokenearly-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tokenearly/tokenearly-js.git"
+  },
+  "license": "MIT",
+  "author": "Tokenearly <support@tokenearly.com>",
+  "type": "commonjs",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "tokenearly": "bin/tokenearly.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/client.test.js test/cli.test.js test/esm.test.mjs test/live.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": false
+  }
+}
