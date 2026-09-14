@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- README: sample output regenerated from the live feed. The feed now excludes stock perpetuals, commodity and pre-IPO contracts, new features for already-listed tokens, migrations and promotional events, so 30-day counts are lower than in earlier samples. No code changes.
+
 ## 0.1.1
 
 - Releases are now published from GitHub Actions via npm trusted publishing (OIDC). No functional changes.

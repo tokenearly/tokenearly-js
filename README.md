@@ -8,15 +8,13 @@ Read new crypto exchange token listings from the command line or from Node.js. *
 
 ```console
 $ npm install tokenearly
-$ npx tokenearly listings --exchange binance --type spot
-published (utc)   exchange  type  symbols     headline
-----------------  --------  ----  ----------  ------------------------------------------------------------------------
-2026-09-10 08:00  Binance   spot              Pakistan Exclusive: September Tradefest is Live!
-2026-09-09 11:30  Binance   spot              Binance Will List 牛来 (牛来) with Seed Tag Applied
-2026-09-09 07:00  Binance   spot              Binance Will Add 2 bStocks Tokenized Securities as Collateral Asset - 2…
-2026-09-09 03:00  Binance   spot  CRMB,HIMSB  Binance Exchange Adds Salesforce (CRMB) and Hims & Hers Health (HIMSB) …
+$ npx tokenearly listings --exchange binance --type spot --days 30
+published (utc)   exchange  type  symbols   headline
+----------------  --------  ----  --------  -----------------------------------------------------------
+2026-09-09 11:30  Binance   spot            Binance Will List 牛来 (牛来) with Seed Tag Applied
+2026-09-04 10:15  Binance   spot  MARSCOIN  Binance Will List MarsCoin (MARSCOIN) with Seed Tag Applied
 
-4 listing(s).
+2 listing(s).
 ```
 
 ## How do I get notified when an exchange lists a new token?
@@ -48,22 +46,22 @@ Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit and Bithumb. `tok
 $ npx tokenearly exchanges
 id       name     collection  30d  spot  futures
 -------  -------  ----------  ---  ----  -------
-mexc     MEXC     polling     159  82    77
-gate     Gate.io  websocket   57   26    31
-huobi    Huobi    polling     45   14    31
-bitget   Bitget   polling     43   11    32
-okx      OKX      polling     42   9     33
-kucoin   KuCoin   polling     31   20    11
-binance  Binance  websocket   19   11    8
-bybit    Bybit    polling     17   7     10
+mexc     MEXC     polling     129  73    56
+gate     Gate.io  websocket   44   19    25
+okx      OKX      polling     32   2     30
+huobi    Huobi    polling     28   13    15
+kucoin   KuCoin   polling     27   20    7
+bitget   Bitget   polling     18   10    8
+bybit    Bybit    polling     13   5     8
 upbit    Upbit    polling     11   11    0
 bithumb  Bithumb  polling     7    7     0
+binance  Binance  websocket   5    2     3
 
-10 exchanges, 431 listings in the last 30 days.
+10 exchanges, 314 listings in the last 30 days.
 Announcements arrive over the exchange's own WebSocket stream for: gate, binance
 ```
 
-Tokenized stocks, equity CFDs and listing-commemoration giveaways are excluded, because none of them is a crypto token listing.
+These are excluded, because none of them is a new crypto token: tokenized stocks and stock perpetuals, commodity and index contracts, pre-IPO contracts, new features for tokens that are already listed (earn, loans, margin, grid and copy trading), migrations and board moves, and promotional events.
 
 ## How the data is collected
 
