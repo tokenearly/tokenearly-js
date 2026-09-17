@@ -185,6 +185,19 @@ Releases are published from GitHub Actions (`.github/workflows/publish.yml`) whe
 
 Before the workflow can publish, the trusted publisher must be configured once on npmjs.com under the package's **Settings → Trusted Publisher**: provider GitHub Actions, organization `tokenearly`, repository `tokenearly-js`, workflow filename `publish.yml`, no environment. Bump `version` in `package.json`, push, then publish a GitHub Release whose tag matches (for example `v0.1.1`).
 
+## Related projects
+
+Everything Tokenearly publishes, so you can pick the entry point that fits:
+
+- Website: [Tokenearly](https://tokenearly.com) — real-time alerts for crypto exchange token listings, announcements, news and X activity; see the [listings timeline](https://tokenearly.com/listings) and the [public listings feed](https://tokenearly.com/api/public/listings.json) (JSON, no key).
+- Python package: [tokenearly on PyPI](https://pypi.org/project/tokenearly/) ([source](https://github.com/tokenearly/tokenearly-python)) — `pip install tokenearly`; command line and Python client for the public listings feed.
+- n8n template: [Send new token listing alerts from 10 crypto exchanges to Telegram, Discord and Google Sheets](https://n8n.io/workflows/19448-send-new-token-listing-alerts-from-10-crypto-exchanges-to-telegram-discord-and-google-sheets/) ([source](https://github.com/tokenearly/n8n-templates)) — import-ready workflow, no code.
+- Webhook receivers: [webhook-examples](https://github.com/tokenearly/webhook-examples) — the Tokenearly webhook payload schema and receivers for FastAPI, Express and Cloudflare Workers.
+- Signal SDK: [signal-sdk](https://github.com/tokenearly/signal-sdk) — Python and TypeScript clients for pushing your own signals into Tokenearly.
+- Curated list: [awesome-crypto-listing-alerts](https://github.com/tokenearly/awesome-crypto-listing-alerts) — exchange announcement pages, listing alert tools, open-source bots and research on the listing effect.
+- GitHub organization: [github.com/tokenearly](https://github.com/tokenearly) — all repositories (organization profile: [.github](https://github.com/tokenearly/.github)).
+- Telegram: official channel [@tokenearly_channel](https://t.me/tokenearly_channel), official bot [@tokenearly_bot](https://t.me/tokenearly_bot).
+
 ## License
 
 MIT
